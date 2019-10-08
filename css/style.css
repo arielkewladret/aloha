@@ -169,10 +169,10 @@ img.shopping {
 
 }
 
-.site-nav > li{
+/* .site-nav > li{
     display: inline-block; 
     align-content: center; 
-}
+} */
 
 /* end nav */
 
@@ -210,6 +210,11 @@ img.shopping {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white; 
+    font-size: 28px; 
+    font-family: 'Raleway', sans-serif;
+    text-shadow: 1px 1px grey; 
+
 }
 
 .product-mens {
@@ -217,36 +222,48 @@ img.shopping {
     /* width: 50%; */
     /* padding-left: 0px; */
     border: 0px; 
-    flex: 2;
+    /* flex: 2; */
 }
 .product-trends {
     /* width: 25%; */
-    padding: 0px; 
-    flex: 1; 
+    grid-area: Trends; 
+    /* padding: 0px;  */
+    /* flex: 1;  */
+    border: 0px; 
+    
 }
 
 .product-glasses {
     /* width: 25%; */
-    padding: 0px; 
-    flex: 1; 
+    grid-area: Glasses; 
+    /* padding: 0px;  */
+    /* flex: 1;  */
+    border: 0px; 
 }
 .product-sale {
     /* width: 25%; */
-    padding: 0px; 
-    flex: 1;
+    /* padding: 0px;  */
+    /* flex: 1; */
+    grid-area: Sale; 
+    border: 0px; 
 }
 .product-bags {
     /* width: 25%; */
-    padding: 0px; 
-    margin: 0px; 
-    flex: 1; 
+    grid-area: Bags; 
+    border: 0px; 
+    /* padding: 0px; 
+    margin: 0px;  */
+    /* flex: 1;  */
 }
 
 .product-womens {
     /* width: 50%; */
-    padding: 0px;
-    flex: 2; 
-    text-align: center; 
+    grid-area: Womens;
+    border: 0px;  
+    /* padding: 0px;
+    flex: 2;  */
+
+    
     /* position: absolute;
     top: 50%;
     left: 50%;
