@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -7,8 +8,7 @@ html {
 *:after {
   box-sizing: inherit;
 }
-/* border: 1px dashed rgb(133, 133, 133);
-} */
+
 */ img {
   max-width: 100%;
   text-align: center;
@@ -18,22 +18,7 @@ img.alohalogo {
   width: 25%;
 }
 
-/* body {
-    font-family: 'Raleway'; 
-    color: black; 
-    text-align: center; 
-    
-} */
-
 /* typography */
-
-/* p  { color:black;
-     font-size: 18.4px; 
-     font-family: 'Railway', sans-serif; 
-     font-weight: 200; 
-     text-align: center; 
-     line-height: 2; 
-} */
 
 h5 {
   color: white;
@@ -68,13 +53,6 @@ h2 {
   text-shadow: 1px 1px grey;
 }
 
-/* .section {
-    color: white; 
-    font-family: 'Playfair Display'
-    font-size: 16px; 
-    text-align: center; 
-} */
-
 /* begin nav */
 
 .site-header {
@@ -84,10 +62,6 @@ h2 {
   padding: 16px;
   /* width: 100%; */
   height: 100px;
-
-  /* flex-basis: 100px; 
-/* padding: 100px 0px;  */
-  /* justify-content: flex-end;  */
 }
 
 .logo {
@@ -137,58 +111,38 @@ img.shopping {
   height: 50px;
 }
 
-/* .site-header :nth-child(3){
-    max-width: 
-} */
-
-/* 
- .container {
-    flex-basis: 50px; 
-    padding: 0; 
-
-
-} */
-
-/* .site-nav > li{
-    display: inline-block; 
-    align-content: center; 
-} */
-
 /* end nav */
 
-/* container */
 .products {
-  display: grid;
-  grid-template-areas:
-    "Mens Mens"
-    "Trends Glasses"
-    "Sale Bags"
-    "Womens Womens";
+  display: flex;
+  justify-content: center;
 }
 
+/* Text over category images  */
 .product {
   position: relative;
   overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.product.large {
+  width: calc(50% - 10px);
+}
+
+.product.small {
+  width: calc(25% - 10px);
 }
 
 .products > img {
-  position: absolute;
+  display: flex;
   top: 0;
-  /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    padding: 5px;  */
 }
 
 .product p {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: white;
   font-size: 28px;
   font-family: "Raleway", sans-serif;
@@ -196,60 +150,42 @@ img.shopping {
 }
 
 .product-mens {
-  grid-area: Mens;
-  /* width: 50%; */
-  /* padding-left: 0px; */
-  border: 0px;
-  /* flex: 2; */
+  background: url(../images/mens-category.jpg);
+  background-size: cover;
+  height: 25vw;
+  border: 20px;
 }
 .product-trends {
-  /* width: 25%; */
-  grid-area: Trends;
-  /* padding: 0px;  */
-  /* flex: 1;  */
-  border: 0px;
+  background: url(../images/trends-category.jpg);
+  background-size: cover;
+  height: 25vw;
 }
 
 .product-glasses {
-  /* width: 25%; */
-  grid-area: Glasses;
-  /* padding: 0px;  */
-  /* flex: 1;  */
-  border: 0px;
+  background: url(../images/glasses-category.jpg);
+  background-size: cover;
+  height: 25vw;
 }
 .product-sale {
-  /* width: 25%; */
-  /* padding: 0px;  */
-  /* flex: 1; */
-  grid-area: Sale;
-  border: 0px;
+  background: url(../images/sale-category.jpg);
+  background-size: cover;
+  height: 25vw;
 }
 .product-bags {
-  /* width: 25%; */
-  grid-area: Bags;
-  border: 0px;
-  /* padding: 0px; 
-    margin: 0px;  */
-  /* flex: 1;  */
+  background: url(../images/bags-category.jpg);
+  background-size: cover;
+  height: 25vw;
 }
 
 .product-womens {
-  /* width: 50%; */
-  grid-area: Womens;
-  border: 0px;
-  /* padding: 0px;
-    flex: 2;  */
-
-  /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
+  background: url(../images/womens-category.jpg);
+  background-size: cover;
+  height: 25vw;
 }
 
 .products img {
   padding: 5px;
-  /* width: 207px 0px 0px, 250px, 150px, 150px, 100px, 250px; */
-  max-width: 150%;
+  max-width: 100%;
   max-height: 200px;
   border: 5px;
 }
@@ -261,19 +197,8 @@ div.products {
   margin: 0px;
   align-items: stretch;
   justify-content: center;
-  /* padding: 240px; */
-  /* max-width: 240px */
-  /* align-content: space-around;  */
+  align-items: flex-start;
 }
-
-/* align-items: flex-start; */
-/* display: inline-block;  
-  
-
-
-   
-
-
 
 /* banner area  */
 
@@ -290,26 +215,23 @@ div.products {
   color: #2d2d2d;
 }
 
-/* p.section { 
-
-} */
-
 .banner {
+  /* display: flex;
+  justify-content: center; */
   background-image: url(../images/banner-girl.png),
     url(../images/flower-bkgd.jpg);
   padding: 100px 0px;
   background-repeat: no-repeat, repeat;
-  background-size: contain;
-  background-position: center;
-  /* padding: 64px 0px;  */
+  background-size: 150px 369px, contain;
+  background-position: bottom;
 }
+
 h3.collection {
   font-family: "Raleway", sans-serif;
-  font-weight: normal;
+  font-weight: 700;
   font-size: 20px;
   text-shadow: 1px 1px grey;
-  /* margin: 0px 0px 24px;  */
-  /* padding: 40px;  */
+  position: relative;
 }
 
 section.banner {
@@ -318,8 +240,13 @@ section.banner {
   text-align: center;
   font-family: "Playfair Display";
   text-shadow: 1px 1px grey;
-  /* margin: 0px 0px 20px;  */
   font-weight: 400px;
+}
+
+.banner p {
+  padding: 15px;
+
+  /* position: relative; */
 }
 
 h5 {
@@ -332,15 +259,13 @@ h5 {
   font-weight: 400px;
 }
 
-/* .products {
-    position: relative;
-} */
-
 /* * 'About Area' */
 
 .styles {
   font-style: normal;
   font-weight: bold;
+  position: relative;
+  padding: 2px;
 }
 
 .headingproducts {
@@ -348,27 +273,44 @@ h5 {
   font-weight: bold;
 }
 
-/* header area */
+/* featured-items area */
 
-/* .section {
-    padding: 50px; 
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center; 
-} */
+.mostloved {
+  padding: 40px;
+  margin: 40px;
 
-/* .shopping { */
-/* position: absolute; 
-    margin-top: 5px;
-    margin-bottom: 5px;
-    right: 200px; */
-/* } */
+  /* header area */
 
-/* .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-  } */
+  /* most loved products area  */
+}
+
+/* mobile style */
+.carousel-cell {
+  width: 100%;
+  text-align: center;
+}
+
+/* media query example */
+
+.carousel-label {
+  text-align: center;
+  font-size: 24px;
+  color: #e2574c;
+  font-family: "Playfair Display", serif;
+}
+
+.product-type {
+  font-size: 16px;
+  color: #969696;
+  /* font-weight: 700; */
+  font-family: "Raleway", sans-serif;
+}
+
+.price {
+  font-size: 16px;
+  color: #969696;
+  font-family: "Raleway", sans-serif;
+}
 
 .newsletter {
   padding: 110px;
@@ -378,18 +320,12 @@ h5 {
   background-size: cover;
   width: 100%;
   height: 400px;
+  margin-bottom: 8px;
 }
 
 .newsletter h2 {
   text-align: center;
 }
-
-/* .simple-subscription-form .button {
-    margin-bottom: 0;
-    border-radius: 0 0 0 0;
-    align-items: center; 
-   
-  } */
 
 .updates {
   text-align: center;
@@ -401,31 +337,90 @@ h5 {
   color: white;
   text-shadow: 1px 1px grey;
   font-size: 18px;
-  font-family: "Railway", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 200;
+  text-align: center;
+  line-height: 2;
+}
+
+.newsletter-subscribe {
   text-align: center;
 }
 
-p#footer-text {
+input#subscribe {
+  padding: 4px 24px;
+  font-family: "Raleway", serif;
+  background: #e2574c;
+  border-radius: 1em;
+  color: white;
+  font-size: 18px;
+  position: relative;
+  left: -5em;
+  height: 35px;
+}
+
+input#your-email {
+  left: 57px;
+  border-radius: 2em;
+  width: 27em;
+  height: 2em;
+  font-family: "Raleway", serif;
+  font-size: 18px;
+  position: relative;
+  padding: 20px;
+  font-weight: 300;
+}
+
+p.footer-text {
   color: white;
   line-height: 1.5;
-  /* align-items: flex-end;  */
   text-align: left;
   font-size: 16px;
-  font-family: "Playfair", sans-serif;
+  font-family: "Playfair Display", serif;
+}
+
+.address {
+  color: #969696;
+  font-family: "Playfair Display", serif;
+  line-height: 1.5;
+  font-size: 16px;
 }
 
 footer {
   display: flex;
   justify-content: space-between;
   background-color: #242424;
+  padding: 50px 50px;
 }
 
-.footer-icons {
+.social {
   padding-right: 25px;
   width: 10 px;
-  padding: 20px;
+  padding: 0px;
   display: inline-block;
+  color: white;
+  line-height: 2;
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+}
+
+.fab {
+  margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-cell {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .site-nav {
+    order: 5;
+  }
+  .site-header {
+    flex-wrap: wrap;
+  }
 }
 
 /* My comment*/
