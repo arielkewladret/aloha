@@ -34,10 +34,10 @@
         <a href="/"></a>
       </div>
       <ul class="site-nav">
-        <li class="navitem"><a href="/">ABOUT</a></li>
-        <li class="navitem"><a href="/">SHOP</a></li>
-        <li class="navitem"><a href="/">FEATURED</a></li>
-        <li class="navitem"><a href="/">UPDATES</a></li>
+        <li class="navitem"><a href="#about">ABOUT</a></li>
+        <li class="navitem"><a href="#shop">SHOP</a></li>
+        <li class="navitem"><a href="#featured">FEATURED</a></li>
+        <li class="navitem"><a href="#updates">UPDATES</a></li>
       </ul>
     </header>
 
@@ -47,7 +47,7 @@
       <p>Spring/Summer 2019</p>
     </section>
 
-    <section class="about container-small">
+    <section class="about container-small" id="about">
       <h4>Hand-Crafted <span class="styles"> Styles </span></h4>
       <p>
         Aloha Apparel Co. sells only the finest ready-to-travel clothing. Browse
@@ -56,7 +56,7 @@
     </section>
 
     <section>
-      <div class="products">
+      <div class="products" id="shop">
         <div class="product large product-mens">
           <!-- <img src="images/mens-category.jpg" /> -->
           <p>MEN'S</p>
@@ -84,7 +84,7 @@
       </div>
     </section>
 
-        <section class="mostloved"> 
+        <section class="mostloved" id="featured"> 
 
   <h4>Most-Loved <span class="headingproducts"> Products </span></h4>
 
@@ -148,13 +148,12 @@
       </div>
       </section> 
 
-
-    <section class="newsletter">
+    <section class="newsletter container" id="updates">
+  
       <h2>Sign-Up For <span class="updates"> Updates </span></h2>
       <p>
         Stay updated on our latest product releases, be first to find out about
-        upcoming 
-        sales, and get free style tips from our blog. Unsubscribe at
+        upcoming <br> sales, and get free style tips from our blog. Unsubscribe at
         any time.
       </p>
    
@@ -162,15 +161,26 @@
       <form class="newsletter-subscribe">
 
     <input type="email" name="your_email" id="your-email" value="" placeholder="Your Email">
-    <input type="submit" name="subscribe" value="Subscribe" id="subscribe">
+    <!-- <button onClick="myFunction()" name="subscribe" value="Subscribe" id="subscribe"> -->
+
+    <button onclick="myFunction()">Subscribe</button>
+
+<script>
+function myFunction() {
+  alert("Aloha! Thank you for subscribing. Stalk you later.");
+}
+</script>
 
       </form>
 
+      
+
 </section>
+<section>
 
     <footer>
       <div>
-        <p class="footer-text">
+        <p class="footer-text container">
           &copy; 2019 Aloha Apparel Co.  <br>
          
           Powered by HTML & CSS.  <br>
@@ -186,7 +196,7 @@
 
         </p>
       </div>
-      <div>
+ <div>
         <ul class="social">
           <li><i class="fab fa-facebook-f"></i><span class="social-text">Facebook</span></li>
           <li><i class="fab fa-twitter"></i><span class="social-text">Twitter</span></li>
@@ -197,6 +207,8 @@
     </footer>
     
     <script src="./js/script.js"></script>
+
+  </section>
   
     
   </body>
