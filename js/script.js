@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // options
     cellAlign: "left",
     wrapAround: true,
-    freeScroll: true
+    freeScroll: true,
+    autoPlay: true
   });
 });
 
