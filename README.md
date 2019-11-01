@@ -1,7 +1,8 @@
 #Aloha Project 
 
-My first website project of Aloha Clothing Company 
+My first website project with Red Academy for Aloha Clothing Company 
 
 ## Key Learnings
 
-HTML, CSS, JavaScript
+HTML, CSS & JavaScript fundamentals.
+
